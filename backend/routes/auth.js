@@ -67,7 +67,7 @@ router.post("/logout", (req, res) => {
 });
 
 //Me
-router.get("/me", async (req, res) => {
+router.get("/me", protect, async (req, res) => {
   res.status(200).json(req.user);
 });
 
